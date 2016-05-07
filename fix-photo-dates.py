@@ -16,7 +16,7 @@ def fix(f):
   print("year={0} month={1} day={2} hour={3} min={4} sec={5}".format(year, month, day, hour, min, sec))
 
   date = "{0}:{1}:{2} {3}:{4}:{5}".format(year,month,day,hour,min,sec)
-  cmd = "exiftool -overwrite_original '-AllDates={0}' {1}".format(date, f)
+  cmd = "exiftool -overwrite_original \"-AllDates={0}\" \"{1}\"".format(date, f)
   print(cmd)
   os.system(cmd)  
 
